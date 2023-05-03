@@ -1,0 +1,13 @@
+## Interface: 100100
+## Title: QuestLookup
+## Version: 5.0.0.8
+## Author: rdh - friarbison
+## X-Category: Query
+## X-AceForum: 13375
+## Notes: Looks up quests to see if character has completed them
+## SavedVariables: QuestLookupDB
+
+embed.xml
+
+main.lua
+qData.lua

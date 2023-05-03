@@ -1,0 +1,157 @@
+# QuestLookup
+# Keep track of changes, if just by a brief summary
+
+# v1.0.0.0 - 8/13/2018 (Initial Release)
+#   Notes:
+#      - Actually forgot to put the version on the upload.
+# v1.0.0.1 - 8/24/2018
+#   Notes:
+#      - Added the version
+#      - Added a message recommending use of the 'Clear' button between lookups
+# v1.0.0.2 - 9/10/2018
+#   Notes:
+#      - New quests have been released for BFA, imagine that.
+#      - Table 6 had additions in qData and also the version in the header.
+# v1.0.0.3 - 10/6/2018
+#   Notes:
+#      - Expedition quests were not in the tables.  This has been corrected.
+# v1.0.0.4 - 10/16/2018
+#   Notes:
+#      - Added a MiniMap icon for bringing up the GUI.  Requested by Galthariel44075.
+#      - Added SavedVariables to the toc file.
+#      - And in memory of Toby ...
+# v1.0.0.5 - 12/12/2018
+#   Notes:
+#      - New Quests were released for BFA 8.1.
+#      - It is my birthday!
+# v1.0.0.6 - 12/15/2018
+#   Notes:
+#      - Changed TOC file to reflect the new game version
+# v1.0.0.7 - 4/18/2019
+#   Notes:
+#      - New quests have been added since the last update.
+#      - Retirement is good!
+# v1.0.0.8 - 6/25/2019
+#   Notes:
+#      - Initial 8.2 Release.
+# v1.0.0.9 - 7/25/2019
+#   Notes:
+#      - Additional quests added for 8.2 Release.
+#      - Added the category, Quest location, to the title.  Seems to add a bit more 
+#        clarity when multiple names pop-up.
+# v1.0.0.10 - 8/13/2019
+#   Notes:
+#      - Updated quests
+#      - Category had the search messed up.  Excluded the category from the search but left it in the title.
+# v1.0.0.11 - 10/6/2019
+#   Notes:
+#      - Updated quests
+# v1.0.0.12 - 10/23/2019
+#   Notes:
+#      - Updated quests
+# v1.0.0.13 - 1/14/2020
+#   Notes:
+#      - Updated quests for 8.3 patch
+# v1.0.0.14 - 1/16/2020
+#   Notes:
+#      - Messed up on the contents of the zip file with the Release of V1.0.0.13.  Corrected.
+# v1.0.0.15 - 1/16/2020
+#   Notes:
+#      - Added the Version Id to the GUI.  Makes it easier to manage.
+# v2.1.0.16 - 9/6/2020
+#   Notes:
+#      - Restructured the API routines to match the new WOW implementations.  It was very different, but in a good way.
+#      - Seems some older quests have been purged.  I haven't taken the time to see which ones.
+#      - The available quests released for Shadowlands has been brought in.  Probably not all of them yet.
+# v3.0.0.1 - 10/13/2020
+#   Notes:
+#      - New design implementing multiple frames that are much more efficient.
+#      - Added C_QuestLog to IsQuestFlaggedCompleted. 
+#      - Changed the Interface number from 80300 to 90001.
+#      - Added the new, and obtainable, quests to data file.
+#   Known Issues:
+#      - Cannot get the minimap icon to cooperate!  Seems to not be saving the last setting.  Still working on it.
+# V3.0.0.2 - 10/23/2020
+#   Notes:
+#      - Callback for OnClosed event was added to trouble shooot the minimap issue and now it is creating its own
+#        problems.  It was no help so just removing it. 
+#      - Left a 'print' statement used for debugging.  So Sorry! 
+#      - Still investigating why the SavedVariable is not performing as expected.
+# V3.0.0.3  -  12/11/2020
+#   Notes:
+#      - Updated the quests database
+# V3.0.0.4  -  1-/26/2021
+#   Notes:
+#      - Added headers /w tooltips for columns and made provisions to keep the columns from wrapping (not perfect, but ok).
+#      - Found the solution to the Minimap icon and SavedVariable issue!  Should be functional now.
+# V3.0.0.5  -  2/27/2021
+#   Notes:
+#      - Addon was showing out-of-date. Had an extra space in to toc file for version.  Weird ...
+#      - Also, pulled new database for quests.
+# V3.0.0.6  -  4/19/2021
+#   Notes:
+#      - On travel for some time and the interface was out of date.  Corrected -> 90002 -> 90005
+#      - Also, pulled new database for quests.
+# V3.0.0.7  -  6/29/2021
+#   Notes:
+#      - New quests for the Shadowlands patch.
+# V3.0.0.8  -  7/18/2021
+#   Notes:
+#      - New quests for the Shadowlands patch 9.1.
+# V3.0.0.9  -  11/2/2021
+#   Notes:
+#      - New quest data table for the Shadowlands patch 9.1.5 and updated the interface id.
+# V3.0.0.10 -  02/24/2022
+#   Notes:
+#      - New quest data table for the Shadowlands patch 9.1.5 and updated the interface id.
+# V3.0.0.11 -  06/04/2022
+#   Notes:
+#      - New quest data table for the Shadowlands patch 9.2.5 and updated the interface id.
+# V3.0.0.12 -  08/18/2022
+#   Notes:
+#      - New quest data table for the Shadowlands patch 9.2.7 and updated the interface id.
+# V4.0.0.0.DFBeta -  09/27/2022
+#   Notes:
+#      - New quest data table for the Dragonflight beta 10.0.2 and updated the interface id.
+#      - WOW Interface changed the background routines for CreateFrame causing a lot of headaches.
+#      - SetBackdrop doesn't work unless you include the new backdrop template, so I changed the 
+#      - Ace libraries, just for beta. Added another table to the quest database and added a wrapper 
+#      - around the calls to these tables in case one doesn't exist.
+# V4.0.0.1  -  10/25/2022
+#   Notes:
+#      - Rebuilt the DB to now include the available Df quests.  The changes used in Beta to accomodate 
+#      - the Frames/Libraries have been included (in the notes above).
+# V5.0.0.2  -  11/17/2022
+#   Notes:
+#      - New quest data table for the Shadowlands patch 10.0.0.  Many of the DragonFlight quests 
+#      - are now included, no way to know if all of them were available.
+# V5.0.0.3  -  12/23/2022
+#   Notes:
+#      - New quest data table for the Shadowlands patch 10.0.2.  
+#      - Had a 'rogue' label that would not hide once shown. It's not 'raogue' anymore.
+#      - There was a dbg print That i forgot to take out during the Dragonflight tests.  It's now gone. 
+# V5.0.0.4  -  1/7/2023
+#   Notes:
+#      - OK, I lefet the label that wouldn't die in last version, my mistake.  Should be gone now.
+# V5.0.0.4a -  1/12/2023
+#   Notes:
+#      - Added to the config page a status that shows the current status of the Elemental Storm quests.
+# V5.0.0.4b -  1/12/2023
+#   Notes:
+#      - Added an update button instead of /reload to refresh the Elemetal Storm quest statuses.
+# V5.0.0.5 -  1/26/2023
+#   Notes:
+#      - New update (10.00.05), new quests.  Also had a bug on line 448, nil obj.
+# V5.0.0.6 -  2/10/2023
+#   Notes:
+#      - More new quests (10.00.05).
+# V5.0.0.7 -  3/21/2023
+#   Notes:
+#      - Forbbiden Reach opened with new quests (10.00.07).
+# V5.0.0.8 -  5/2/2023
+#   Notes:
+#      - New Patch - 10.1.0 with new quests.
+
+
+
+
