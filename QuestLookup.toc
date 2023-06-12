@@ -1,6 +1,6 @@
 ## Interface: 100100
 ## Title: QuestLookup
-## Version: 5.0.0.8
+## Version: 5.0.0.9
 ## Author: rdh - friarbison
 ## X-Category: Query
 ## X-AceForum: 13375

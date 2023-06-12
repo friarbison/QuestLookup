@@ -275,6 +275,15 @@ local function readTableForKey (container, entry)
       end
     end
   end
+  
+  if QuestData.Manual then
+    for k,v in pairs(QuestData.Manual) do  
+      if k == entry then
+        createLabels(container, k, v[1],v[2],v[3],v[4])
+        return nil
+      end
+    end
+  end
 end
 
 local function readTableForName (container, entry)
@@ -392,6 +401,21 @@ local function readTableForName (container, entry)
         createLabels(container, k,v[1],v[2],v[3],v[4])
         cntr = cntr + 1
       end
+    end
+    
+    if QuestData.quest_table8 then
+    for k,v in pairs(QuestData.Manual) do  
+      if cntr > 100 then
+        ClearAll(container,"",0)
+        QuestLookupMainFrame:SetStatusText("Too many quests found.  Change search criteria.")        
+        return nil
+      end
+      if string.find(string.lower(v[1]),string.lower(entry)) then
+        print("We are here.")
+        createLabels(container, k,v[1],v[2],v[3],v[4])
+        cntr = cntr + 1
+      end
+    end
     end
   end
 end
