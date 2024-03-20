@@ -411,7 +411,7 @@ local function readTableForName (container, entry)
         return nil
       end
       if string.find(string.lower(v[1]),string.lower(entry)) then
-        print("We are here.")
+        --print("We are here.")
         createLabels(container, k,v[1],v[2],v[3],v[4])
         cntr = cntr + 1
       end

@@ -154,6 +154,27 @@
 # V5.0.0.9 -  6/12/2023
 #   Notes:
 #      - Found many quests were missing.  Added another method to pull quests.  Data should be a much more comprehensive.
+# V5.0.0.10-  7/19/2023
+#   Notes:
+#      - Big release (10.1.5), updating quests.
+# V5.0.0.11-  9/19/2023
+#   Notes:
+#      - Release (10.1.7), updating quests.
+# V5.0.0.12- 11/21/2023
+#   Notes:
+#      - Release (10.2.0), updating quests.
+# V5.0.0.13- 1/16/2024
+#   Notes:
+#      - Just another update for a minor release (10.2.5), updating quests.
+# V5.0.0.14 - 1/16/2024
+#   Notes:
+#      - Updating quests to include the new Gilneas release.
+# V5.0.0.15 - 1/25/2024
+#   Notes:
+#      - Data files corrupted causing many quest to be unavailable or entirely missing.  Rebuilt all data.
+# V5.0.0.16- 3/19/2024
+#   Notes:
+#      - Update for release (10.2.6), updating quests.
 
 
 
